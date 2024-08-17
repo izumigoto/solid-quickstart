@@ -1,7 +1,7 @@
-import { useEffect } from 'solid-js';
+import { createEffect } from 'solid-js';
 
 const DownloadPage = () => {
-  useEffect(() => {
+  createEffect(() => {
     // Create a link element
     const link = document.createElement('a');
     link.href = '/weshi-poc.zip'; // Path to the file in the public directory
@@ -13,7 +13,7 @@ const DownloadPage = () => {
     
     // Remove the link from the document body
     document.body.removeChild(link);
-  }, []);
+  });
 
   return (
     <div>
