@@ -5,7 +5,7 @@ const DownloadPage = () => {
     // Create a link element
     const link = document.createElement('a');
     link.href = '/weshi-poc.zip'; // Path to the file in the public directory
-    link.download = 'weshi-poc.zip'; // Filename for the download
+    link.download = 'weshi-poc.zip'; // Desired filename for the downloaded file
     
     // Append the link to the document body and click it
     document.body.appendChild(link);
@@ -13,13 +13,12 @@ const DownloadPage = () => {
     
     // Remove the link from the document body
     document.body.removeChild(link);
+    
+    // Optionally, you can redirect to another page or just close the page
+    window.location.href = '/'; // Redirect to home or another page if needed
   });
 
-  return (
-    <div>
-      <p>Your download should start automatically. If it doesn't, <a href="/weshi-poc.zip">click here</a>.</p>
-    </div>
-  );
+  return null; // Return null to render nothing on the page
 };
 
 export default DownloadPage;
