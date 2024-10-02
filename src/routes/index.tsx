@@ -6,6 +6,7 @@ export default function Home() {
     <main>
       <Title>Hello World</Title>
       <h1>Hello world!</h1>
+      <h1>Poc by w3shi(S.Lakshmi Vignesh)</h1>
       <Counter />
       <p>
         Visit{" "}
