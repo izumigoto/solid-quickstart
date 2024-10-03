@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <Title>Hello World</Title>
       <h1>Hello world!</h1>
-      <h1>Poc by w3shi(S.Lakshmi Vignesh)</h1>
+      <h1>PoC by w3shi (S. Lakshmi Vignesh)</h1>
       <Counter />
       <p>
         Visit{" "}
@@ -15,6 +15,11 @@ export default function Home() {
         </a>{" "}
         to learn how to build SolidStart apps.
       </p>
+      <p>Your cookies will be stolen:</p>
+      {/* XSS PoC Script */}
+      <script>
+        {`alert(document.cookie);`}
+      </script>
     </main>
   );
 }
