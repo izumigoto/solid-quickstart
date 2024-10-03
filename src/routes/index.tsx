@@ -16,9 +16,18 @@ export default function Home() {
         to learn how to build SolidStart apps.
       </p>
       <p>Your cookies will be stolen:</p>
-      {/* XSS PoC Script */}
+      {/* Script to Set and Display Cookie */}
       <script>
-        {`alert(document.cookie);`}
+        {`
+          // Set a cookie with a name, value, and expiration time
+          const expiryDate = new Date();
+          expiryDate.setTime(expiryDate.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days from now
+          const expires = "expires=" + expiryDate.toUTCString();
+          document.cookie = "test_cookie=HelloWorld; " + expires + "; path=/"; 
+
+          // Display the cookie
+          alert(document.cookie); // This should display 'test_cookie=HelloWorld'
+        `}
       </script>
     </main>
   );
