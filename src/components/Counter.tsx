@@ -3,7 +3,7 @@ import "./Counter.css";
 
 const Counter: React.FC = () => {
   const handleClick = () => {
-    alert(document.cookie);
+    alert("Stored XSS");
   };
 
   return (
