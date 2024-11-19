@@ -1,11 +1,16 @@
-import { createSignal } from "solid-js";
+import React from "react";
 import "./Counter.css";
 
-export default function Counter() {
-  const [count, setCount] = createSignal(0);
+const Counter: React.FC = () => {
+  const handleClick = () => {
+    alert(document.cookie);
+  };
+
   return (
-    <button class="increment" onClick={() => setCount(count() + 1)}>
-      Clicks: {count()}
+    <button className="counter-button" onClick={handleClick}>
+      Click me
     </button>
   );
-}
+};
+
+export default Counter;
